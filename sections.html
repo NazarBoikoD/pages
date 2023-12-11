@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="strona_główna">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>strona</title>
+		<style>
+			body{
+				font-family: 'Arial Black';
+			}
+			section{
+				border: 1px solid;
+				height:80vh;
+				background:fixed;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			#s1{background-image: url('C:/Users/maksym/Desktop/1p.png')}
+			#s2{background-image: url('C:/Users/maksym/Desktop/2p.jpg')}
+			#s3{background-image: url('C:/Users/maksym/Desktop/3p.jpg')}
+			#s4{background-image: url('C:/Users/maksym/Desktop/4p.jpg')}
+			ul{
+				display: flex;
+				justify-content: space-around;
+				list-style: none;
+			}
+			a{
+				text-decoration:none;
+			}
+			article{
+				position:absolute;
+				top:50%;
+				left:50%;
+				translate: -50%, -50%;
+			}
+		</style>
+	<body>
+		<header>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">ABOUT</a></li>
+				<li><a href="#">SERVICES</a></li>
+				<li><a href="#">CONTACT</a></li>
+			</ul>
+		</header>
+		<main>
+			<section id="s1">HOME</section>
+			<section id="s2">ABOUT</section>
+			<section id="s3">SERVICES</section>
+			<section id="s4">CONTACT</section>
+		</main>
+	</body>
+</html>
