@@ -5,63 +5,66 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>strona</title>
 		<style>
-			html{
-				scroll-behavior: smooth;
+			#sq1{
+				position:absolute;
+				height: 80px;
+				width: 80px;
+				background-color: aqua;
 			}
-			#circle_top{
-				position: fixed;
-				right:49.5vh;
-				top:32vh;
-				margin: 50px auto 0;
-				display:flex;
-				justify-content:center;
-				align-items: center;
-				border-radius:50%;
-				background-color:white;
-				width:70px;
-				height:70px;
-				background: radial-gradient(circle at 65% 15%, white 1px, #cedde0 3%, #ffffff 60%, #fffbfb 100%);
-				z-index:100;
+			
+			#sq2{
+				position:absolute;
+				left:5vh;
+				top:5vh;
+				height: 80px;
+				width: 80px;
+				background-color: greenyellow;
 			}
-			#circle_mid{
-				position: fixed;
-				right:48.5vh;
-				top:39vh;
-				margin: 50px auto 0;
-				display:flex;
-				justify-content:center;
-				align-items: center;
-				border-radius:50%;
-				background-color:white;
-				width:90px;
-				height:90px;
-				background: radial-gradient(circle at 65% 15%, white 1px, #cedde0 3%, #ffffff 60%, #fffbfb 100%);
-				z-index:100;
-			}
-			#circle_bottom{
-				position: fixed;
-				right:46.5vh;
-				top:48vh;
-				margin: 50px auto 0;
-				display:flex;
-				justify-content:center;
-				align-items: center;
-				border-radius:50%;
-				background-color:white;
-				width:130px;
-				height:130px;
-				background: radial-gradient(circle at 65% 15%, white 1px, #cedde0 3%, #ffffff 60%, #fffbfb 100%);
-				z-index:100;
-			}
-			body{
-				background:grey;
+			
+			#sq3{
+				position:absolute;
+				left:9vh;
+				top:9vh;
+				height: 80px;
+				width: 80px;
+				background-color: red;
 			}
 		</style>
 	<body>
-		<main>
-			<div id="circle_top">.</div>
-			<div id="circle_mid">.</div>
-			<div id="circle_bottom">.</div>
-		</main>
+		<div id="sq1"></div>
+		<div id="sq2"></div>
+		<div id="sq3"></div>
+		<script>
+			const s1 = document.getElementById('sq1');
+			const s2 = document.getElementById('sq2');
+			const s3 = document.getElementById('sq3');
+			
+			s1.addEventListener('click', przenos);
+			s2.addEventListener('click', przenos);
+			s3.addEventListener('click', przenos);
+			
+			function przenos(event){
+				let element = event.target;
+				
+				if(element.id == "sq1"){
+					s1.style.zIndex = 3;
+					s2.style.zIndex = 2;
+					s3.style.zIndex = 2;
+					console.log("OK");
+				}
+				if(element.id == "sq2"){
+					s1.style.zIndex = 2;
+					s2.style.zIndex = 3;
+					s3.style.zIndex = 2;
+					console.log("OK");
+				}
+				if(element.id == "sq3"){
+					s1.style.zIndex = 2;
+					s2.style.zIndex = 2;
+					s3.style.zIndex = 3;
+					console.log("OK");
+				}
+			}
+		</script>
 	</body>
 </html>
