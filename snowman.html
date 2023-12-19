@@ -5,66 +5,126 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>strona</title>
 		<style>
-			#sq1{
-				position:absolute;
-				height: 80px;
-				width: 80px;
-				background-color: aqua;
+			body{
+				background:grey;
 			}
-			
-			#sq2{
-				position:absolute;
-				left:5vh;
-				top:5vh;
-				height: 80px;
-				width: 80px;
-				background-color: greenyellow;
+			#circle_top{
+				position: absolute;
+				left:50vh;
+				top:0vh;
+				margin: 50px auto 0;
+				display:flex;
+				justify-content:center;
+				align-items: center;
+				border-radius:50%;
+				background-color:white;
+				width:70px;
+				height:70px;
+				background: radial-gradient(circle at 65% 15%, white 1px, #b6cfd4 3%, #ffffff 60%, #b8b8bb 100%);
+				z-index:100;
 			}
-			
-			#sq3{
-				position:absolute;
-				left:9vh;
-				top:9vh;
-				height: 80px;
-				width: 80px;
-				background-color: red;
+			#circle_mid{
+				position: absolute;
+				left:49vh;
+				top:6vh;
+				margin: 50px auto 0;
+				display:flex;
+				justify-content:center;
+				align-items: center;
+				border-radius:50%;
+				background-color:white;
+				width:90px;
+				height:90px;
+				background: radial-gradient(circle at 65% 15%, white 1px, #b6cfd4 3%, #ffffff 60%, #b8b8bb 100%);
+				z-index:100;
+			}
+			#circle_bottom{
+				position: absolute;
+				left:47vh;
+				top:14vh;
+				margin: 50px auto 0;
+				display:flex;
+				justify-content:center;
+				align-items: center;
+				border-radius:50%;
+				background-color:white;
+				width:130px;
+				height:130px;
+				background: radial-gradient(circle at 65% 15%, white 1px, #b6cfd4 3%, #ffffff 60%, #b8b8bb 100%);
+				z-index:100;
+			}
+			#oko_l{
+				position: absolute;
+				left:52vh;
+				top:8vh;
+				display:flex;
+				justify-content:center;
+				align-items: center;
+				border-radius:50%;
+				width:5px;
+				height:5px;
+				background: black;
+				z-index:102;
+			}
+			#oko_p{
+				position: absolute;
+				left:55vh;
+				top:8vh;
+				display:flex;
+				justify-content:center;
+				align-items: center;
+				border-radius:50%;
+				width:5px;
+				height:5px;
+				background: black;
+				z-index:100;
+			}
+			#moon{
+				position: absolute;
+				left:52.7vh;
+				top:8vh;
+				width: 20px;
+				height: 20px;
+				border-radius: 30%;
+				box-shadow: 2px 2px 0 0 black;
+				transform: rotate(45deg);
+				z-index:102;
+			}
+			#arm_l{
+				position: absolute;
+				left:45vh;
+				top:14vh;
+				display:flex;
+				justify-content:center;
+				align-items: center;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: black;
+				z-index:100;
+			}
+			#arm_r{
+				position: absolute;
+				right:40vh;
+				top:8vh;
+				display:flex;
+				justify-content:center;
+				align-items: center;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background: black;
+				z-index:100;
 			}
 		</style>
 	<body>
-		<div id="sq1"></div>
-		<div id="sq2"></div>
-		<div id="sq3"></div>
-		<script>
-			const s1 = document.getElementById('sq1');
-			const s2 = document.getElementById('sq2');
-			const s3 = document.getElementById('sq3');
-			
-			s1.addEventListener('click', przenos);
-			s2.addEventListener('click', przenos);
-			s3.addEventListener('click', przenos);
-			
-			function przenos(event){
-				let element = event.target;
-				
-				if(element.id == "sq1"){
-					s1.style.zIndex = 3;
-					s2.style.zIndex = 2;
-					s3.style.zIndex = 2;
-					console.log("OK");
-				}
-				if(element.id == "sq2"){
-					s1.style.zIndex = 2;
-					s2.style.zIndex = 3;
-					s3.style.zIndex = 2;
-					console.log("OK");
-				}
-				if(element.id == "sq3"){
-					s1.style.zIndex = 2;
-					s2.style.zIndex = 2;
-					s3.style.zIndex = 3;
-					console.log("OK");
-				}
-			}
-		</script>
+		<div id="arm_l"></div>
+		<div id="arm_r"></div>
+		<div id="moon"></div>
+		<div id="circle_top"></div>
+		<div id="oko_l"></div>
+		<div id="oko_p"></div>
+		<div id="circle_mid"></div>
+		<div id="circle_bottom"></div>
 	</body>
 </html>
