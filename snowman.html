@@ -8,58 +8,10 @@
 			html{
 				scroll-behavior: smooth;
 			}
-			body{
-				font-family: 'Arial Black';
-			}
-			section{
-				border: 1px solid;
-				height:80vh;
-				background:fixed;
-				background-repeat: no-repeat;
-				background-size: cover;
-			}
-			#s1{background-image: url('C:/Users/maksym/Desktop/1p.png')}
-			#s2{background-image: url('C:/Users/maksym/Desktop/2p.jpg')}
-			#s3{background-image: url('C:/Users/maksym/Desktop/3p.jpg')}
-			#s4{background-image: url('C:/Users/maksym/Desktop/4p.jpg')}
-			ul{
-				display: flex;
-				justify-content: space-around;
-				list-style: none;
-			}
-			a{
-				text-decoration:none;
-			}
-			article{
-				position:absolute;
-				top:50%;
-				left:50%;
-				translate: -50%, -50%;
-			}
-			header{
-				top:0;
-				position:fixed;
-				background-color:white;
-				width:100%;
-			}
-			#up{
-				display:flex;
-				justify-content:center;
-				align-items: center;
-				border-radius:50%;
-				position:fixed;
-				bottom:10px;
-				right:10px;
-				background:white;
-				width:30px;
-				height:30px;
-				padding:10px;
-				font-size:40px;
-			}
 			#circle_top{
 				position: fixed;
 				right:49.5vh;
-				top:3vh;
+				top:32vh;
 				margin: 50px auto 0;
 				display:flex;
 				justify-content:center;
@@ -101,27 +53,15 @@
 				background: radial-gradient(circle at 65% 15%, white 1px, #cedde0 3%, #ffffff 60%, #fffbfb 100%);
 				z-index:100;
 			}
+			body{
+				background:grey;
+			}
 		</style>
 	<body>
-		<header>
-			<ul>
-				<li><a href="#s1">HOME</a></li>
-				<li><a href="#s2">ABOUT</a></li>
-				<li><a href="#s3">SERVICES</a></li>
-				<li><a href="#s4">CONTACT</a></li>
-			</ul>
-		</header>
 		<main>
-			<section id="s1">HOME</section>
-			<section id="s2">ABOUT</section>
-			<section id="s3">SERVICES</section>
-			<section id="s4">
-			CONTACT
 			<div id="circle_top">.</div>
 			<div id="circle_mid">.</div>
 			<div id="circle_bottom">.</div>
-			</section>
 		</main>
-	<div id="up"><a href="#s1">&#x219F</a></div>
 	</body>
 </html>
