@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta content="strona_główna">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>strona</title>
+		<style>
+			#sq1{
+				position:absolute;
+				height: 80px;
+				width: 80px;
+				background-color: aqua;
+			}
+			
+			#sq2{
+				position:absolute;
+				left:5vh;
+				top:5vh;
+				height: 80px;
+				width: 80px;
+				background-color: greenyellow;
+			}
+			
+			#sq3{
+				position:absolute;
+				left:9vh;
+				top:9vh;
+				height: 80px;
+				width: 80px;
+				background-color: red;
+			}
+		</style>
+	<body>
+		<div id="sq1"></div>
+		<div id="sq2"></div>
+		<div id="sq3"></div>
+		<script>
+			const s1 = document.getElementById('sq1');
+			const s2 = document.getElementById('sq2');
+			const s3 = document.getElementById('sq3');
+			
+			<!-- const divy = document.querySelectorAll('div'); -->
+			
+			<!-- console.log(divy) -->
+			
+			<!-- divy.forEach(div => { -->
+				<!-- div.addEventListener('click',przenos); -->
+			<!-- }); -->
+			
+			s1.addEventListener('click', przenos);
+			s2.addEventListener('click', przenos);
+			s3.addEventListener('click', przenos);
+			
+			<!-- let ind = 0; -->
+			
+			<!-- function przenos(event){ -->
+				<!-- let element = event.target; -->
+				
+				if(element.id == "sq1"){
+					s1.style.zIndex = 3;
+					s2.style.zIndex = 2;
+					s3.style.zIndex = 2;
+					console.log("OK");
+				}
+				if(element.id == "sq2"){
+					s1.style.zIndex = 2;
+					s2.style.zIndex = 3;
+					s3.style.zIndex = 2;
+					console.log("OK");
+				}
+				if(element.id == "sq3"){
+					s1.style.zIndex = 2;
+					s2.style.zIndex = 2;
+					s3.style.zIndex = 3;
+					console.log("OK");
+				}
+				
+				<!-- divy.forEach(div => { -->
+					<!-- if(div == element){ -->
+					<!-- div.style.zIndex = 3; -->
+					<!-- } else { -->
+						<!-- div.style.zIndex = div.style.zIndex; -->
+					<!-- } -->
+				<!-- }); -->
+				
+			<!-- } -->
+		</script>
+	</body>
+</html>
