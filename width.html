@@ -1,0 +1,139 @@
+<html lang="pl">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale:1.0">
+	<meta charset="UTF-8">
+	<title>strona testowa</title>
+	<style>
+		#menu{
+	display: flex;
+	list-style:none;
+	justify-content:space-between;	
+
+}
+a{	border: 2px black solid;
+	background-color: rgba(0,0,0,0.3);
+	padding:3px;
+
+	
+
+	}
+header{width:auto; margin:auto;}
+
+.sub{
+	border: 2px black solid;
+	background-color: rgba(255,0,0,0.5);
+	display:none;
+	list-style:none;
+}
+
+#menu a:hover ~ ul{display:block}
+
+#guzik{
+	border:2px black solid;
+	padding:10px;
+	background-color:rgba(255,0,0,0.5);
+	width:20px;
+	height:20px;
+    justify-content: center;
+    align-items: center;
+	display:none;
+	margin-left:50%;
+}
+
+@media only screen and (max-width: 600px) {
+  #menu {
+    display:none;
+  }
+  #guzik{
+	display:flex;
+  }
+}
+p{text-align:center;}
+
+@media only screen and (min-width: 600px) {
+	#menu {
+		display:flex;
+	}
+}
+span{border:2px red solid; background-color: rgba(255,0,0,0.4)}
+	</style>
+</head>
+<body>
+	<header>
+		<div id="guzik">+</div>
+		
+		<ul id="menu">
+		<li><a href="#">HOME</a>
+			<ul class="sub">
+				<li>sub1</li>
+				<li>sub2</li>
+				<li>sub3</li>
+				<li>sub4</li>
+			</ul>
+		</li>
+		<li><a href="#">CONTACTS</a>
+			<ul class="sub">
+				<li>sub1</li>
+				<li>sub2</li>
+				<li>sub3</li>
+			</ul>	
+		</li>		
+		<li><a href="#">BLOG</a>
+			<ul class="sub">
+				<li>sub1</li>
+				<li>sub2</li>
+				<li>sub3</li>
+				<li>sub4</li>
+			</ul>	
+		</li>	
+		<li><a href="#">SHORTCODES</a>
+			<ul class="sub">
+				<li>sub1</li>
+				<li>sub2</li>
+
+			</ul>
+		</li>	
+		</ul>
+	</header>
+	<main>
+		<p>To jest strona obsługujące ekrany równe lub szersze od 600px</p> 
+		<div>twoja aktualna szerokość jest równa = <span id="licznik"></span></div>
+	</main>
+<script>
+	const guzik = document.getElementById('guzik');
+	const menu = document.getElementById('menu');
+	const licznik = document.getElementById('licznik');
+	guzik.addEventListener('click', rozwin);
+	window.addEventListener('resize', reset);
+	let open = true;
+	let width = window.innerWidth;
+function rozwin(){
+	
+	if(open == true){
+		console.log("prawda");
+		menu.style.display = "flex";
+		open = false;
+	}else{
+		console.log("fałsz");
+		open = true;
+		menu.style.display = "none";
+	};
+}
+function reset(){
+	licznik.innerText = width + "px";
+	width = window.innerWidth;
+
+	if(width >= 601){
+		open = true;
+		menu.style.display = "flex";
+	} 
+	if(width <= 600){
+		open = false;
+		menu.style.display = "none";
+	}
+	
+}
+
+</script>
+</body>
+</html>
