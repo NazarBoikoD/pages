@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #header{
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+        }
+        #menu{
+            position: fixed;
+            justify-content: center;
+            margin: 5px;
+            top: 0;
+        }
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 75px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .fa-instagram {
+            background: #000000;
+            color: white;
+            float: left;
+
+        }
+        .fa-discord {
+            background: #000000;
+            color: white;
+            float: left;
+        }
+        .fa-twitter {
+            background: #000000;
+            color: white;
+            float: left;
+        }
+        .fa-google {
+            background: #000000;
+            color: white;
+            float: left;
+        }
+        .feedback{
+            position: relative;
+            background: #e6c19f;
+            width: 150px;
+            height: 70px;
+            top: 0;
+            left: 5px;
+            float: left;
+        }
+        #feedback_inner{
+            margin: 0;
+            padding: 0;
+            position: grid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div id="menu">
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-discord"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="feedback"><div id="feedback_inner">Feedback</div></a>
+        </div>
+    </header>
+
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d");
+
+        let x = 20, y = 20, width = 25, height = 25;
+
+        for(let i = 0; i>3; i++){
+            for(let j = 0; j>3; j++){
+                ctx.beginPath();
+                ctx.rect(x,y,width,height);
+                ctx.stroke();
+            }
+        }
+    </script>
+</body>
+</html>
